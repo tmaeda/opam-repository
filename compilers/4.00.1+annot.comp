@@ -1,0 +1,9 @@
+opam-version: "1"
+name: "4.00.1+annot"
+src: "http://caml.inria.fr/pub/distrib/ocaml-4.00/ocaml-4.00.1.tar.gz"
+patches: ["https://bitbucket.org/tmaeda/spotinstall/raw/8e69f4b2b56285953bb2c53f56227244cddfd6c4/ocaml-annot-4.00.1.patch"]
+make: [ "world" "opt" "opt.opt" ]
+packages : [ "base-unix" "base-bigarray" "base-threads" ]
+env: [
+  [ CAML_LD_LIBRARY_PATH = "%{lib}%/stublibs" ]
+]
